@@ -1,0 +1,11 @@
+{
+  "name": "date-holidays-bundle-test",
+  "version": "1.0.0",
+  "description": "A bundle test for date-holidays",
+  "private": true,
+  "scripts": {
+    "bundle": "browserify -r date-holidays -s Holidays -o bundle.js",
+    "official": "npm install browserify https://github.com/commenthol/date-holidays.git && npm run bundle",
+    "test": "npm install browserify https://github.com/kodie/date-holidays.git && npm run bundle"
+  }
+}

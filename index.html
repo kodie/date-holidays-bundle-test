@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+  <title>date-holidays-bundle-test</title>
+  <script src="./bundle.js" type="text/javascript"></script>
+</head>
+<body>
+  <pre id="output"></pre>
+  <script>
+    try {
+      var hd = new Holidays('US', 'la', 'no')
+      var output = hd.getHolidays(2016)
+      output = JSON.stringify(output, null, 2)
+    } catch(e) {
+      var output = e
+    }
+    console.log(output)
+    document.getElementById('output').innerHTML = output
+  </script>
+</body>
+</html>
